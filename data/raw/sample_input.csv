@@ -1,0 +1,7 @@
+claim_id,battery_brand,warranty_months,battery_age_months,inspection_status,claim_status
+CLM001,Century,12,8,Completed,Approved
+CLM002,Bosch,12,15,Completed,Rejected
+CLM003,Astra,18,10,Pending,Pending
+CLM004,Bforty,12,6,Completed,Approved
+CLM005,Century,12,14,Completed,Rejected
+CLM006,Bosch,18,9,Pending,Pending
