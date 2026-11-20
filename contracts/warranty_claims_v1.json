@@ -1,0 +1,60 @@
+
+{
+  "contract_name": "bateriku_warranty_claims",
+  "version": "1.0.0",
+  "source": "data/raw/sample_input.csv",
+  "data_classification": "synthetic",
+  "required_columns": [
+    "claim_id",
+    "battery_brand",
+    "warranty_months",
+    "battery_age_months",
+    "inspection_status",
+    "claim_status"
+  ],
+  "fields": {
+    "claim_id": {
+      "type": "string",
+      "nullable": false,
+      "unique": true
+    },
+    "battery_brand": {
+      "type": "string",
+      "nullable": false,
+      "min_length": 1
+    },
+    "warranty_months": {
+      "type": "integer",
+      "nullable": false,
+      "minimum": 1
+    },
+    "battery_age_months": {
+      "type": "integer",
+      "nullable": false,
+      "minimum": 0
+    },
+    "inspection_status": {
+      "type": "string",
+      "nullable": false,
+      "allowed_values": [
+        "Completed",
+        "Pending"
+      ]
+    },
+    "claim_status": {
+      "type": "string",
+      "nullable": false,
+      "allowed_values": [
+        "Approved",
+        "Rejected",
+        "Pending"
+      ]
+    }
+  },
+  "quality_rules": {
+    "duplicate_claim_ids": "reject",
+    "missing_required_values": "reject",
+    "invalid_data_types": "reject",
+    "unexpected_columns": "reject"
+  }
+}
