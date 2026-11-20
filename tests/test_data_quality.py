@@ -94,3 +94,30 @@ def test_invalid_dataset(
     assert result.returncode != 0
     assert "DATA VALIDATION FAILED" in result.stdout
     assert expected_error in result.stdout
+
+def test_claim_status_distribution(test_project):
+    prepare_data(test_project)
+    source = test_project / "data/raw/sample_input.csv"
+
+    with source.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    statuses = {row["claim_status"] for row in rows}
+
+    assert len(statuses) >= 2, (
+        "Dataset must contain at least two claim status classes"
+    )
+
+
+def test_approved_claim_within_warranty(test_project):
+    prepare_data(test_project)
+    source = test_project / "data/raw/sample_input.csv"
+
+    with source.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    for row in rows:
+        if row["claim_status"] == "Approved":
+            assert int(row["battery_age_months"]) <= int(
+                row["warranty_months"]
+            ), "Approved claim exceeds warranty duration"
