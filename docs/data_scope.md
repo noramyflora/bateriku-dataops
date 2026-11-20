@@ -86,13 +86,46 @@ A future AI model would require a clearly defined and validated decision policy,
 - Final warranty decisions may depend on purchase verification, inspection findings and applicable warranty terms.
 - The initial sample is intended to test data-processing functionality, not AI prediction accuracy.
 
+
 ## 9. Relationship to Assignment 1
 
-The DataOps package supports the data completeness, validation and traceability needs identified in Assignment 1.
+The DataOps Engineering implementation in Assignment 2 extends the requirements and risk management activities established in Assignment 1 for the AI-Assisted Battery Warranty Verification and Claim Management System for Bateriku.com.
 
-At least two exact requirement or risk identifiers from the Assignment 1 repository must be inserted and linked to the relevant data contract rules and tests.
+### 9.1 Requirements Traceability
 
-**Status:** Pending verification of Assignment 1 requirement and risk identifiers.
+| Requirement ID | Assignment 1 Requirement | Assignment 2 DataOps Implementation |
+|---|---|---|
+| REQ-01 | Capture battery warranty claim details | Validation of required claim data fields |
+| REQ-02 | Verify warranty information | Validation of warranty duration values as a preliminary data quality control |
+| REQ-03 | Identify incomplete claim information | Detection of missing claim identifiers |
+
+### 9.2 Risk Traceability
+
+| Risk ID | Identified Risk | DataOps Mitigation |
+|---|---|---|
+| R-01 | Incomplete customer warranty claim records | Required-field validation and missing claim ID detection |
+| R-03 | Limited availability of historical claim data | Use of a clearly labelled synthetic dataset for academic testing |
+| R-04 | Inconsistent data formats and duplicate records | Data validation rules and duplicate claim ID detection |
+| R-06 | Failure of automated validation or GitHub Actions | Automated data quality tests executed through GitHub Actions CI |
+
+### 9.3 Verification Evidence
+
+The DataOps pipeline was executed using Google Colab and GitHub Actions.
+
+The following verification results were obtained:
+
+- Successful validation of six synthetic warranty claim records.
+- Successful generation of the validated dataset.
+- Four automated data quality tests passed.
+- GitHub Actions Data Quality CI workflow completed successfully.
+
+These results demonstrate the implemented data quality controls and automated testing process. They do not establish the accuracy of AI-assisted warranty recommendations or validate real customer warranty decisions.
+
+### 9.4 Traceability Status
+
+The selected requirements and risks from Assignment 1 have been linked to relevant DataOps validation activities and available test evidence in Assignment 2.
+
+Further implementation and verification will be required for the remaining system requirements.
 
 ## 10. Expected Outcome
 
