@@ -99,16 +99,22 @@ These commands assume the required input dataset and data contract files are pre
 
 ## 7. Automated Data Quality Testing
 
-Four automated tests were implemented using pytest:
+Six automated data quality tests were implemented using pytest to verify the reliability and integrity of the synthetic battery warranty claims dataset.
+
+The automated tests include:
 
 1. Valid dataset verification.
 2. Missing claim ID detection.
 3. Duplicate claim ID detection.
 4. Invalid warranty duration detection.
+5. Claim status distribution validation.
+6. Approved claim within warranty validation.
 
-**Test result: 4 PASSED**
+**Test Result: 6 PASSED**
 
-The automated tests were successfully executed in Google Colab and GitHub Actions.
+All six automated tests were successfully executed through GitHub Actions CI.
+
+The tests demonstrate that the implemented DataOps workflow can detect selected data quality issues and validate predefined warranty-related business rules.
 
 ## 8. Continuous Integration
 
@@ -175,7 +181,7 @@ The following activities have been completed and demonstrated:
 - Python-based data validation.
 - Validation of six synthetic records.
 - Automated data quality testing.
-- Four successful pytest test cases.
+- Six successful pytest test cases, including distribution and warranty domain quality tests.
 - Successful GitHub Actions CI execution.
 - Requirements and risk traceability documentation.
 - Collection of execution evidence.
