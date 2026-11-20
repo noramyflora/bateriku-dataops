@@ -1,0 +1,18 @@
+
+Requirement_ID,Requirement,Implementation,Verification,Status
+REQ-01,Define data scope and requirements,docs/data_scope.md,Documentation review,Documented
+REQ-02,Establish versioned data contract,contracts/warranty_claims_v1.json,Schema and contract review,Documented
+REQ-03,Implement data ingestion and validation,src/validate_data.py,Execution and output verification,Implemented
+REQ-04,Validate schema completeness uniqueness and validity,tests/,Automated pytest execution,Partially verified
+REQ-05,Validate distribution or class balance,tests/,Automated distribution test,Planned
+REQ-06,Validate domain and ethics rules,tests/,Automated domain or ethics test,Planned
+REQ-07,Maintain dataset version metadata,metadata/dataset_manifest.json,Manifest and checksum verification,Documented
+REQ-08,Maintain data lineage,metadata/lineage.json,Lineage review,Documented
+REQ-09,Implement continuous integration,.github/workflows/data-quality.yml,GitHub Actions execution,Verified
+REQ-10,Document governance and privacy,docs/data_governance.md,Documentation review,Documented
+REQ-11,Document reproducibility,docs/reproducibility.md,Reproduction procedure review,Documented
+REQ-12,Document dataset fields,docs/data_dictionary.md,Data dictionary review,Documented
+REQ-13,Document dataset characteristics,docs/data_card.md,Data card review,Documented
+REQ-14,Record changes and impact analysis,docs/change_record.md,Change record review,Partially verified
+REQ-15,Demonstrate controlled failure,tests/,Negative test and CI evidence,Pending verification
+REQ-16,Provide reproducibility evidence,evidence/,Evidence review,Partially verified
