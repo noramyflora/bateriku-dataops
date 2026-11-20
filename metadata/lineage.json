@@ -1,0 +1,37 @@
+
+{
+  "project": "AI-Assisted Battery Warranty Verification and Claim Management System for Bateriku.com",
+  "lineage_version": "1.0",
+  "dataset_type": "synthetic",
+  "source": {
+    "dataset": "data/raw/sample_input.csv",
+    "description": "Synthetic battery warranty claims dataset",
+    "format": "CSV"
+  },
+  "processing": {
+    "validation_script": "src/validate_data.py",
+    "operations": [
+      "Read source dataset",
+      "Validate required fields",
+      "Check duplicate claim IDs",
+      "Validate warranty duration",
+      "Reject invalid records"
+    ]
+  },
+  "output": {
+    "dataset": "data/processed/validated_claims.csv",
+    "format": "CSV",
+    "description": "Validated synthetic warranty claims dataset"
+  },
+  "reproducibility": {
+    "execution_environment": "Python 3",
+    "testing_framework": "pytest",
+    "continuous_integration": "GitHub Actions",
+    "workflow": ".github/workflows/data-quality.yml"
+  },
+  "verification": {
+    "observed_test_result": "4 tests passed",
+    "source": "GitHub Actions CI and Google Colab",
+    "status": "initial verification"
+  }
+}
