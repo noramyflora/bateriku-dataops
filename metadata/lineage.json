@@ -30,7 +30,7 @@
     "workflow": ".github/workflows/data-quality.yml"
   },
   "verification": {
-    "observed_test_result": "4 tests passed",
+    "observed_test_result": "6 tests passed",
     "source": "GitHub Actions CI and Google Colab",
     "status": "verified"
   }
