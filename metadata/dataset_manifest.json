@@ -10,7 +10,7 @@
   "status": "draft",
 "row_count": 6,
 "checksum_sha256": "0704ac8bba62a5d550656027856c19f86ef8217e0e174e10c3044022da26a2de",
-  "commit_id": null,
+  "commit_id": 047e34763b2b4f0301f7befaa972b2899a616b87,
   "created_at_utc": null,
   "parameters": {},
   "processed_dataset": "data/processed/validated_claims.csv"
